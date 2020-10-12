@@ -1,0 +1,12 @@
+# deployConfig:
+#     name: test ## 测试环境
+#     customDomain:
+#         name: play.malagu.example.shenzilong.cn
+#         protocol: HTTP
+
+malagu:
+    includeModules: true
+    webpack:
+        config:
+            externals:
+                - puppeteer
