@@ -6,11 +6,13 @@ import { Context, Request, Response } from 'koa'
 export class html2imgController {
   @Get('/test')
   @ContentType('image/png')
-  async session(): Promise<string | Buffer | (string | Buffer)[]> {
+  async session(): Promise<any> {
     return nodeHtmlToImage({
       output: './image.png',
       html: '<html><body>Hello world!</body></html>',
-      puppeteerArgs: ['--no-sandbox'],
-    })
+      puppeteerArgs: {
+        args: ['--no-sandbox'],
+      },
+    }).catch(e => console.log(e))
   }
 }
