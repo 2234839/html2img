@@ -10,6 +10,7 @@ export class html2imgController {
     return nodeHtmlToImage({
       output: './image.png',
       html: '<html><body>Hello world!</body></html>',
+      puppeteerArgs: ['--no-sandbox'],
     })
   }
 }
