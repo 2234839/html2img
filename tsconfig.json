@@ -1,29 +1,33 @@
 {
   "compilerOptions": {
-    "skipLibCheck": true,
-    "declaration": true,
-    "declarationMap": true,
-    "noImplicitAny": true,
-    "noEmitOnError": false,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "strictNullChecks": true,
+    "allowJs": true,
+    "module": "commonjs",
+    "outDir": "./dist",
+    "lib": ["es2017"],
+    "emitDeclarationOnly": true,
+    "removeComments": true,
+    "noImplicitAny": false,
+    "esModuleInterop": true,
+    "preserveConstEnums": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "downlevelIteration": true,
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "jsx": "react",
-    "target": "es5",
-    "lib": [
-      "es6",
-      "dom"
+    "typeRoots": [
+      "node_modules/@types",
+      "typings"
     ],
-    "sourceMap":false,
-    "rootDir": "src",
-    "outDir": "lib"
+    "baseUrl": ".",
+    "paths": {
+      "configs": ["configs"],
+      "app": ["app"]
+    }
   },
-  "include": [
-    "src"
+
+  "compileOnSave": false,
+  "includes": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
   ]
 }
